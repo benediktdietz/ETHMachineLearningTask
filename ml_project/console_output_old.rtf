@@ -1,0 +1,521 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww35880\viewh20180\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \CocoaLigature0 $ python anton.py\
+\
+no cols removed... all contain data\
+\
+\
+number of non-NaNs for each col [percentage of total]:\
+pid                 100.0\
+Time                100.0\
+Age                 100.0\
+EtCO2                 4.3\
+PTT                   4.5\
+BUN                   8.8\
+Lactate               4.7\
+Temp                 35.6\
+Hgb                   9.8\
+HCO3                  5.5\
+BaseExcess            8.7\
+RRate                82.4\
+Fibrinogen            1.1\
+Phosphate             5.1\
+WBC                   8.4\
+Creatinine            7.8\
+PaCO2                 9.2\
+AST                   2.5\
+FiO2                 11.7\
+Platelets             7.9\
+SaO2                  5.7\
+Glucose              20.6\
+ABPm                 85.9\
+Magnesium             7.7\
+Potassium            12.5\
+ABPd                 66.9\
+Calcium               7.8\
+Alkalinephos          2.5\
+SpO2                 85.6\
+Bilirubin_direct      0.3\
+Chloride              6.1\
+Hct                  12.0\
+Heartrate            87.8\
+Bilirubin_total       2.3\
+TroponinI             1.7\
+ABPs                 84.1\
+pH                   11.0\
+dtype: float64\
+\
+useable_feature_keys:\
+Index(['pid', 'Time', 'Age', 'Temp', 'RRate', 'FiO2', 'Glucose', 'ABPm',\
+       'Potassium', 'ABPd', 'SpO2', 'Hct', 'Heartrate', 'ABPs', 'pH'],\
+      dtype='object') \
+\
+\
+anton.py:75: RuntimeWarning: Mean of empty slice\
+  nanmean = np.nanmean(input_data)\
+\
+loaded arrays:\
+x_train: [ (18995, 14) ]\
+          pid   Age       Temp      RRate      FiO2     Glucose        ABPm  Potassium       ABPd        SpO2        Hct   Heartrate        ABPs      pH\
+0          1  34.0  36.750000  17.000000  0.425000  120.000000   68.333333   4.000000  50.250000  100.000000  23.200000   77.083333  114.500000  7.3700\
+1         10  71.0  36.000000  18.090909  0.000000  152.000000  101.727273   3.200000  83.272727   98.000000  42.100000   78.818182  132.909091  0.0000\
+2        100  68.0  36.250000  14.833333  0.000000  243.000000   81.833333   3.600000  62.833333   96.500000  36.800000  109.083333  117.000000  0.0000\
+3       1000  79.0  36.818182  12.000000  0.400000  128.625000   83.454545   3.966667  62.818182   98.818182  27.300000   86.363636  141.909091  7.3000\
+4      10000  76.0  36.750000  12.090909  0.500000  121.750000   69.090909   3.900000  48.227273   98.545455  30.300000   77.090909  123.000000  7.3900\
+...      ...   ...        ...        ...       ...         ...         ...        ...        ...         ...        ...         ...         ...     ...\
+18990   9993  80.0  35.750000  19.125000  0.000000  125.666667   79.545455   4.000000  70.818182   99.272727  26.150000  112.818182   99.636364  0.0000\
+18991   9995  73.0  36.000000  19.545455  1.000000  269.000000  103.000000   4.900000   0.000000   94.545455  35.600000   62.636364  180.181818  0.0000\
+18992   9996  53.0  37.400000  16.500000  0.511111  147.666667   73.333333   4.300000  55.958333   99.583333  30.033333   98.500000   99.250000  7.4025\
+18993   9998  89.0  36.636364  20.454545  0.000000  119.000000   83.727273   4.000000  54.681818  100.000000  25.600000   97.454545  131.545455  0.0000\
+18994   9999  85.0  36.000000  18.272727  0.000000  105.000000   90.909091   4.300000  87.000000   97.571429  29.450000   78.181818  128.090909  0.0000\
+\
+[18995 rows x 14 columns]\
+\
+x_test: [ (12664, 14) ]\
+          pid   Age       Temp      RRate      FiO2     Glucose       ABPm  Potassium       ABPd        SpO2    Hct   Heartrate        ABPs      pH\
+0          0  39.0  36.000000  11.714286  0.530000  217.500000  80.750000   4.150000  64.500000  100.000000  28.45   84.500000  128.625000  7.3700\
+1      10001  62.0  37.250000  16.666667  0.000000    0.000000  91.555556   0.000000  82.055556   94.200000   0.00  111.400000  111.444444  0.0000\
+2      10003  72.0  36.909091  16.818182  0.700000  139.777778  82.090909   4.115000  56.818182   99.636364   0.00   91.000000  124.909091  7.4600\
+3      10004  44.0  36.250000  13.857143  0.000000   84.000000  66.909091   3.700000  56.454545   95.727273  37.50   87.636364   94.727273  0.0000\
+4      10005  88.0  36.000000  19.272727  0.000000  117.000000  71.300000   4.700000   0.000000   95.909091  29.60   54.818182  130.100000  0.0000\
+...      ...   ...        ...        ...       ...         ...        ...        ...        ...         ...    ...         ...         ...     ...\
+12659   9989  43.0  37.000000  19.916667  0.000000  104.000000  78.181818   4.300000   0.000000   94.916667  30.70  111.416667    0.000000  0.0000\
+12660   9991  62.0  37.000000  18.111111  0.433333  132.666667  98.777778   3.566667   0.000000  100.000000  23.60   70.777778  137.555556  7.3600\
+12661   9992  51.0   0.000000  17.500000  0.640000  129.500000  63.416667   4.600000  46.958333   98.666667  34.95   81.916667  101.250000  7.3950\
+12662   9994  52.0  36.333333  13.500000  0.492857  133.750000  91.083333   4.075000  73.375000  100.000000  32.00  100.250000  119.916667  7.4575\
+12663   9997  57.0  37.750000  16.454545  0.416667  108.500000  74.636364   4.100000  52.409091   99.727273  30.00   86.909091  119.454545  7.3500\
+\
+[12664 rows x 14 columns]\
+\
+x_train: [ (18995, 16) ]\
+          pid  LABEL_BaseExcess  LABEL_Fibrinogen  LABEL_AST  LABEL_Alkalinephos  ...  LABEL_Sepsis  LABEL_RRate  LABEL_ABPm  LABEL_SpO2  LABEL_Heartrate\
+0          1               1.0               0.0        0.0                 0.0  ...           0.0         12.1        85.4       100.0             59.9\
+1         10               0.0               0.0        0.0                 0.0  ...           0.0         17.8       100.6        95.5             85.5\
+2        100               1.0               0.0        0.0                 0.0  ...           0.0         16.5        88.3        96.5            108.1\
+3       1000               0.0               0.0        0.0                 0.0  ...           0.0         19.4        77.2        98.3             80.9\
+4      10000               0.0               0.0        0.0                 0.0  ...           0.0         12.6        76.8        97.7             95.3\
+...      ...               ...               ...        ...                 ...  ...           ...          ...         ...         ...              ...\
+18990   9993               0.0               0.0        0.0                 0.0  ...           0.0         17.1        69.8       100.0            110.7\
+18991   9995               0.0               0.0        0.0                 0.0  ...           0.0         17.6        97.3        97.8             59.2\
+18992   9996               1.0               0.0        0.0                 0.0  ...           0.0         17.3        66.3        96.9            100.3\
+18993   9998               0.0               0.0        0.0                 0.0  ...           0.0         18.8        81.5        96.9             99.4\
+18994   9999               0.0               0.0        1.0                 1.0  ...           0.0         18.0        95.5        97.0             81.9\
+\
+[18995 rows x 16 columns]\
+\
+***\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_BaseExcess\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.81 sec\
+fitted Logistic Regression in ........ 0.4 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 37.94 sec\
+fitted Support Vectors RBF in ........ 10.9 sec\
+fitted Support Vectors Poly 2 in ..... 9.29 sec\
+fitted Support Vectors Poly 3 in ..... 11.22 sec\
+fitted AdaBoost  in .................. 9.47 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.87     0.9         0.67       0.50      0.73     0.64          0.57  2292.0  2281.0  4669.0  256.0\
+1     Logistic Regression   0.84     0.9         0.63       0.47      0.70     0.62          0.53  2293.0  2604.0  4346.0  255.0\
+6               AdaBoost    0.84     0.9         0.58       0.44      0.67     0.59          0.48  2293.0  2910.0  4040.0  255.0\
+3     Support Vectors RBF   0.83     0.9         0.54       0.42      0.64     0.57          0.44  2293.0  3193.0  3757.0  255.0\
+4  Support Vectors Poly 2   0.83     0.9         0.58       0.44      0.66     0.59          0.48  2293.0  2947.0  4003.0  255.0\
+5  Support Vectors Poly 3   0.83     0.9         0.55       0.42      0.65     0.58          0.45  2293.0  3116.0  3834.0  255.0\
+2  Support Vectors Linear   0.57     0.9         0.17       0.29      0.37     0.43          0.07  2293.0  5738.0  1212.0  255.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Fibrinogen\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 8.02 sec\
+fitted Logistic Regression in ........ 0.36 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 45.24 sec\
+fitted Support Vectors RBF in ........ 7.15 sec\
+fitted Support Vectors Poly 2 in ..... 6.57 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 35.1 sec\
+fitted AdaBoost  in .................. 9.77 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness    #TP     #FP     #TN   #FN\
+0      Random Forest Gini   0.66     0.9         0.22       0.08      0.27     0.15          0.12  630.0  6840.0  1958.0  70.0\
+6               AdaBoost    0.62     0.9         0.18       0.08      0.23     0.15          0.08  629.0  7222.0  1576.0  71.0\
+1     Logistic Regression   0.61     0.9         0.18       0.08      0.23     0.15          0.08  630.0  7209.0  1589.0  70.0\
+4  Support Vectors Poly 2   0.55     0.9         0.11       0.07      0.17     0.14          0.01  629.0  7830.0   968.0  71.0\
+3     Support Vectors RBF   0.53     0.9         0.10       0.07      0.16     0.14         -0.00  630.0  7930.0   868.0  70.0\
+5  Support Vectors Poly 3   0.47     0.9         0.08       0.07      0.14     0.13         -0.02  630.0  8110.0   688.0  70.0\
+2  Support Vectors Linear   0.43     0.9         0.07       0.07      0.13     0.13         -0.03  630.0  8160.0   638.0  70.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_AST\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 9.33 sec\
+fitted Logistic Regression in ........ 0.21 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 40.07 sec\
+fitted Support Vectors RBF in ........ 19.03 sec\
+fitted Support Vectors Poly 2 in ..... 18.12 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 41.87 sec\
+fitted AdaBoost  in .................. 9.22 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.65     0.9         0.23       0.27      0.39     0.41          0.13  2047.0  5561.0  1660.0  230.0\
+6               AdaBoost    0.62     0.9         0.16       0.25      0.34     0.39          0.06  2049.0  6050.0  1171.0  228.0\
+1     Logistic Regression   0.61     0.9         0.16       0.25      0.34     0.39          0.06  2048.0  6070.0  1151.0  229.0\
+3     Support Vectors RBF   0.57     0.9         0.11       0.24      0.30     0.38          0.01  2049.0  6423.0   798.0  228.0\
+4  Support Vectors Poly 2   0.50     0.9         0.09       0.24      0.28     0.38         -0.01  2049.0  6578.0   643.0  228.0\
+5  Support Vectors Poly 3   0.49     0.9         0.07       0.23      0.27     0.37         -0.03  2049.0  6712.0   509.0  228.0\
+2  Support Vectors Linear   0.45     0.9         0.08       0.24      0.27     0.37         -0.02  2049.0  6661.0   560.0  228.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Alkalinephos\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 8.79 sec\
+fitted Logistic Regression in ........ 0.18 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.67 sec\
+fitted Support Vectors RBF in ........ 19.61 sec\
+fitted Support Vectors Poly 2 in ..... 16.9 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 38.14 sec\
+fitted AdaBoost  in .................. 9.04 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.65     0.9         0.24       0.27      0.40     0.41          0.14  2017.0  5480.0  1774.0  227.0\
+6               AdaBoost    0.62     0.9         0.17       0.25      0.34     0.39          0.07  2019.0  6008.0  1246.0  225.0\
+1     Logistic Regression   0.60     0.9         0.14       0.24      0.32     0.38          0.04  2019.0  6263.0   991.0  225.0\
+3     Support Vectors RBF   0.56     0.9         0.11       0.24      0.29     0.38          0.01  2019.0  6481.0   773.0  225.0\
+5  Support Vectors Poly 3   0.54     0.9         0.12       0.24      0.31     0.38          0.02  2015.0  6349.0   905.0  229.0\
+4  Support Vectors Poly 2   0.52     0.9         0.12       0.24      0.30     0.38          0.02  2019.0  6378.0   876.0  225.0\
+2  Support Vectors Linear   0.51     0.9         0.11       0.24      0.30     0.38          0.01  2018.0  6433.0   821.0  226.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Bilirubin_total\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 8.84 sec\
+fitted Logistic Regression in ........ 0.2 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.89 sec\
+fitted Support Vectors RBF in ........ 19.66 sec\
+fitted Support Vectors Poly 2 in ..... 19.37 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 38.83 sec\
+fitted AdaBoost  in .................. 9.05 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.66     0.9         0.24       0.27      0.40     0.42          0.14  2053.0  5451.0  1762.0  232.0\
+6               AdaBoost    0.63     0.9         0.18       0.26      0.35     0.40          0.08  2056.0  5923.0  1290.0  229.0\
+1     Logistic Regression   0.60     0.9         0.13       0.25      0.32     0.39          0.03  2055.0  6253.0   960.0  230.0\
+3     Support Vectors RBF   0.58     0.9         0.12       0.24      0.31     0.38          0.02  2056.0  6371.0   842.0  229.0\
+2  Support Vectors Linear   0.54     0.9         0.11       0.24      0.30     0.38          0.01  2056.0  6428.0   785.0  229.0\
+5  Support Vectors Poly 3   0.52     0.9         0.10       0.24      0.30     0.38          0.00  2056.0  6464.0   749.0  229.0\
+4  Support Vectors Poly 2   0.49     0.9         0.09       0.24      0.28     0.38         -0.01  2055.0  6569.0   644.0  230.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Lactate\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 8.09 sec\
+fitted Logistic Regression in ........ 0.39 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.04 sec\
+fitted Support Vectors RBF in ........ 14.97 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 2 in ..... 20.38 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 29.06 sec\
+fitted AdaBoost  in .................. 9.07 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.76     0.9         0.39       0.27      0.49     0.41          0.29  1710.0  4658.0  2938.0  192.0\
+1     Logistic Regression   0.75     0.9         0.37       0.26      0.48     0.41          0.27  1711.0  4774.0  2822.0  191.0\
+6               AdaBoost    0.73     0.9         0.31       0.25      0.43     0.39          0.21  1711.0  5247.0  2349.0  191.0\
+3     Support Vectors RBF   0.69     0.9         0.24       0.23      0.38     0.37          0.14  1711.0  5743.0  1853.0  191.0\
+5  Support Vectors Poly 3   0.69     0.9         0.21       0.22      0.35     0.36          0.11  1711.0  6020.0  1576.0  191.0\
+4  Support Vectors Poly 2   0.68     0.9         0.24       0.23      0.37     0.36          0.14  1711.0  5785.0  1811.0  191.0\
+2  Support Vectors Linear   0.49     0.9         0.17       0.21      0.31     0.34          0.07  1711.0  6335.0  1261.0  191.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_TroponinI\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.83 sec\
+fitted Logistic Regression in ........ 0.26 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.76 sec\
+fitted Support Vectors RBF in ........ 8.19 sec\
+fitted Support Vectors Poly 2 in ..... 9.6 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 33.32 sec\
+fitted AdaBoost  in .................. 8.97 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness    #TP     #FP     #TN   #FN\
+0      Random Forest Gini   0.74     0.9         0.42       0.15      0.46     0.25          0.32  853.0  4994.0  3556.0  95.0\
+1     Logistic Regression   0.72     0.9         0.33       0.13      0.39     0.23          0.23  853.0  5707.0  2843.0  95.0\
+6               AdaBoost    0.71     0.9         0.32       0.13      0.37     0.22          0.22  853.0  5849.0  2701.0  95.0\
+2  Support Vectors Linear   0.57     0.9         0.16       0.11      0.23     0.19          0.06  853.0  7210.0  1340.0  95.0\
+3     Support Vectors RBF   0.55     0.9         0.15       0.11      0.23     0.19          0.05  853.0  7245.0  1305.0  95.0\
+4  Support Vectors Poly 2   0.53     0.9         0.14       0.10      0.22     0.19          0.04  853.0  7342.0  1208.0  95.0\
+5  Support Vectors Poly 3   0.53     0.9         0.16       0.11      0.23     0.19          0.06  853.0  7197.0  1353.0  95.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_SaO2\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.87 sec\
+fitted Logistic Regression in ........ 0.11 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 38.1 sec\
+fitted Support Vectors RBF in ........ 12.22 sec\
+fitted Support Vectors Poly 2 in ..... 13.84 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 17.9 sec\
+fitted AdaBoost  in .................. 9.03 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness     #TP     #FP     #TN    #FN\
+0      Random Forest Gini   0.78     0.9         0.41       0.32      0.52     0.47          0.31  1995.0  4310.0  2968.0  225.0\
+1     Logistic Regression   0.77     0.9         0.39       0.31      0.51     0.46          0.29  1998.0  4426.0  2852.0  222.0\
+6               AdaBoost    0.76     0.9         0.36       0.30      0.49     0.45          0.26  1998.0  4647.0  2631.0  222.0\
+4  Support Vectors Poly 2   0.74     0.9         0.29       0.28      0.43     0.42          0.19  1998.0  5189.0  2089.0  222.0\
+5  Support Vectors Poly 3   0.74     0.9         0.25       0.27      0.40     0.41          0.15  1998.0  5454.0  1824.0  222.0\
+3     Support Vectors RBF   0.73     0.9         0.25       0.27      0.40     0.41          0.15  1998.0  5443.0  1835.0  222.0\
+2  Support Vectors Linear   0.37     0.9         0.06       0.23      0.26     0.36         -0.04  1998.0  6838.0   440.0  222.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Bilirubin_direct\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.83 sec\
+fitted Logistic Regression in ........ 0.32 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.87 sec\
+fitted Support Vectors RBF in ........ 4.06 sec\
+fitted Support Vectors Poly 2 in ..... 5.33 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 28.57 sec\
+fitted AdaBoost  in .................. 9.02 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness    #TP     #FP     #TN   #FN\
+0      Random Forest Gini   0.61    0.88         0.20       0.04      0.22     0.07          0.08  284.0  7381.0  1795.0  38.0\
+1     Logistic Regression   0.60    0.90         0.17       0.04      0.19     0.07          0.07  289.0  7617.0  1559.0  33.0\
+6               AdaBoost    0.57    0.90         0.13       0.03      0.15     0.07          0.02  289.0  8024.0  1152.0  33.0\
+5  Support Vectors Poly 3   0.55    0.90         0.13       0.03      0.15     0.07          0.03  289.0  8005.0  1171.0  33.0\
+3     Support Vectors RBF   0.54    0.89         0.11       0.03      0.14     0.07          0.01  288.0  8124.0  1052.0  34.0\
+4  Support Vectors Poly 2   0.53    0.90         0.13       0.04      0.16     0.07          0.03  289.0  7961.0  1215.0  33.0\
+2  Support Vectors Linear   0.47    0.90         0.08       0.03      0.11     0.06         -0.02  289.0  8444.0   732.0  33.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_EtCO2\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.34 sec\
+fitted Logistic Regression in ........ 0.34 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 38.28 sec\
+fitted Support Vectors RBF in ........ 5.93 sec\
+fitted Support Vectors Poly 2 in ..... 8.37 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 23.2 sec\
+fitted AdaBoost  in .................. 8.95 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness    #TP     #FP     #TN   #FN\
+0      Random Forest Gini   0.79    0.89         0.44       0.10      0.47     0.18          0.33  561.0  4981.0  3890.0  66.0\
+6               AdaBoost    0.76    0.90         0.37       0.09      0.40     0.17          0.27  564.0  5624.0  3247.0  63.0\
+1     Logistic Regression   0.74    0.90         0.38       0.09      0.42     0.17          0.28  564.0  5486.0  3385.0  63.0\
+3     Support Vectors RBF   0.73    0.90         0.38       0.09      0.42     0.17          0.28  564.0  5476.0  3395.0  63.0\
+5  Support Vectors Poly 3   0.72    0.90         0.38       0.09      0.41     0.17          0.28  564.0  5494.0  3377.0  63.0\
+4  Support Vectors Poly 2   0.71    0.90         0.39       0.09      0.42     0.17          0.28  563.0  5451.0  3420.0  64.0\
+2  Support Vectors Linear   0.50    0.90         0.17       0.07      0.22     0.13          0.07  563.0  7350.0  1521.0  64.0 \
+\
+\
+\
+\
+\
+*****************************************\
+start fitting and evaluation for LABEL_Sepsis\
+\
+\
+fitting models to data ...\
+fitted Random Forest Gini in ......... 7.76 sec\
+fitted Logistic Regression in ........ 0.34 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Linear in ..... 39.78 sec\
+fitted Support Vectors RBF in ........ 5.31 sec\
+fitted Support Vectors Poly 2 in ..... 5.95 sec\
+/Users/benediktdietz/miniconda3/lib/python3.7/site-packages/sklearn/svm/_base.py:231: ConvergenceWarning: Solver terminated early (max_iter=100000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.\
+  % self.max_iter, ConvergenceWarning)\
+fitted Support Vectors Poly 3 in ..... 32.28 sec\
+fitted AdaBoost  in .................. 9.0 sec\
+\
+\
+\
+\
+\
+\
+\
+classification results on validation set for recall approx. 0.9 :\
+                     model  auroc  recall  selectivity  precision  accuracy  f1score  informedness    #TP     #FP     #TN   #FN\
+0      Random Forest Gini   0.67     0.9         0.27       0.07      0.31     0.13          0.17  488.0  6521.0  2433.0  56.0\
+1     Logistic Regression   0.66     0.9         0.25       0.07      0.29     0.13          0.15  489.0  6717.0  2237.0  55.0\
+6               AdaBoost    0.63     0.9         0.17       0.06      0.21     0.12          0.07  489.0  7409.0  1545.0  55.0\
+2  Support Vectors Linear   0.57     0.9         0.15       0.06      0.19     0.11          0.05  489.0  7606.0  1348.0  55.0\
+4  Support Vectors Poly 2   0.54     0.9         0.14       0.06      0.19     0.11          0.04  489.0  7657.0  1297.0  55.0\
+3     Support Vectors RBF   0.53     0.9         0.12       0.06      0.16     0.11          0.02  489.0  7914.0  1040.0  55.0\
+5  Support Vectors Poly 3   0.53     0.9         0.12       0.06      0.16     0.11          0.02  489.0  7896.0  1058.0  55.0 \
+\
+\
+\
+(base) \
+}
